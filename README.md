@@ -89,7 +89,13 @@ grupos = [
     150
 ]
 labels = df_faixas_etarias['grupo_etario'].to_list()
-df['grupo_etario'] = pd.cut(df['IDADE - Idade'], bins=grupos, include_lowest=False, precision=0, labels=labels)
+df['grupo_etario'] = pd.cut(
+    df['IDADE - Idade'],
+    bins=grupos,
+    include_lowest=False,
+    precision=0,
+    labels=labels
+)
 df[['IDADE - Idade', 'grupo_etario']].tail()
 ```
 
