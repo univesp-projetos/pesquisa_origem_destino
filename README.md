@@ -1,20 +1,29 @@
 # Pesquisa Origem Destino
 
-## 1977
+Bases de dados Origem
+
+https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino
+
+
+1977
+
 Base ok, inclusive com municípios
 
 ## 1987
+
 Base ok, inclusive com municípios
 
 ## 1997
+
 Base ok, inclusive com zonas e municípios
 
 ## 2007
+
 Base ok, inclusive com zonas e municípios
 
 ## 2017
-Base 2017 ok, inclusive com zonas e municípios
 
+Base 2017 ok, inclusive com zonas e municípios
 
 ## Projeções da População - IBGE
 
@@ -27,7 +36,6 @@ Arquivo usado para elaborarmos a projeção da população de acordo com a faixa
 [projecoes_2018_populacao_2010_2060_20200406.xls](projecoes_2018_populacao_2010_2060_20200406.xls)
 
 Script para tratamento dos dados e inclusão de informações sobre projeção IBGE [OD_2017_tratamento_inclusao_projecao_IBGE](OD_2017_tratamento_inclusao_projecao_IBGE).
-
 
 O dataframe de saída conterá as colunas abaixo:
 
@@ -50,7 +58,7 @@ O dataframe de saída conterá as colunas abaixo:
        'FATOR_2017_2025', 'FATOR_2017_2035', 'FATOR_2017_2040',
        'FATOR_2017_2045', 'FATOR_2017_2050', 'FATOR_2017_2055',
        'FATOR_2017_2060'
-       
+
 O campo ID_PESS será usado para "ligar" com a base de dados do Power BI, e os campos "FATOR_2017_YYYY" são as colunas
 que geram um fator de comparação entre a projeção do IBGE de 2017 e o ano final do nome da coluna, por exemplo,
 a coluna FATOR_2017_2025 compara o fator de evolução daquele grupo de 2017 até 2025.
@@ -98,4 +106,3 @@ df['grupo_etario'] = pd.cut(
 )
 df[['IDADE - Idade', 'grupo_etario']].tail()
 ```
-
